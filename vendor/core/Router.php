@@ -76,6 +76,7 @@ class Router {
               $action=self::lowerCamelCase(self::$route['action']).'Action';
               if(method_exists($obj,$action)){
                   $obj->$action();
+                  $obj->getView();
               }else{
                   echo "Action <b>$action</b> not found.";
               }
@@ -102,8 +103,8 @@ class Router {
      */
     protected static function removeQueryString($url){
         if ($url){
-            $params=explode('&',$url,2);
-            if(false==strpos($params[0],'=')){
+            $params=explode('?',$url,2);
+            if($pos=strpos($params[0],'=') === false){
                 return trim($params[0],'/');
             }else{
                 return '';

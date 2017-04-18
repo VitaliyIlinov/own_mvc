@@ -9,6 +9,7 @@ define('WWW', __DIR__);
 define('ROOT', dirname(__DIR__));
 define('CORE', ROOT . DS. 'vendor'.DS.'core');
 define('APP', ROOT . DS. 'app');
+define('LAYOUT', 'default');
 
 require "../vendor/libs/functions.php";
 
@@ -19,14 +20,10 @@ spl_autoload_register(function ($class) {
     }
 });
 
-//Router::add('^page/(?P<action>[a-z-]+)/(?P<alias>[a-z-]+)$', ['controller' => 'Page']);
 Router::add('^page/(?P<alias>[a-z-]+)$', ['controller' => 'Page','action'=>'view']);
 
 #default roots
 Router::add('^$', ['controller' => 'main', 'action' => 'index']);
 Router::add('^(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?$');
-
-debug(Router::getRoutes());
-
 
 Router::dispatch($uri);

@@ -7,9 +7,7 @@ use vendor\core\base\Controller;
 class PostNew extends Controller {
 
     public function indexAction(){
-        debug($this->route);
-        debug($_GET);
-        echo __METHOD__;
+        //echo __METHOD__;
     }
 
     public function editAction(){

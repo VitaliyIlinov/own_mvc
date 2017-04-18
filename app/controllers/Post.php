@@ -13,4 +13,5 @@ use vendor\core\base\Controller;
 
 class Post extends Controller {
 
+
 }
