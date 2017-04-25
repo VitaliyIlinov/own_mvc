@@ -11,7 +11,7 @@ namespace app\controllers;
 
 use vendor\core\base\Controller;
 
-class Post extends Controller {
+class PostController extends Controller {
 
 
 }

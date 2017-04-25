@@ -4,7 +4,7 @@ namespace app\controllers;
 
 use vendor\core\base\Controller;
 
-class PostNew extends Controller {
+class PostNewController extends Controller {
 
     public function indexAction(){
         //echo __METHOD__;
