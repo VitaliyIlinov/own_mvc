@@ -13,5 +13,6 @@ use vendor\core\base\Model;
 
 class Main extends Model {
 
-    public $table='post';
+    public $table='posts';
+
 }

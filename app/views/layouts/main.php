@@ -12,7 +12,7 @@
     <![endif]-->
 </head>
 <body>
-<h1>main.php</h1>
+<h1>/layouts/main.php:</h1>
 <?=$content;?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="/public/bootstrap/js/bootstrap.min.js"></script>
